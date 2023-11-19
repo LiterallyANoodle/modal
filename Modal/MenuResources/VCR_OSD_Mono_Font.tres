@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://b05hw8a4km7wx"]
+
+[resource]
+font_names = PackedStringArray("VCR OSD Mono")
+hinting = 2

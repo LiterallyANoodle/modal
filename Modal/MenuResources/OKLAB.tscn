@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dedalbl4dukii"]
+
+[ext_resource type="Script" path="res://MenuResources/OKLAB.gd" id="1_2ono7"]
+
+[node name="OKLAB" type="Node"]
+script = ExtResource("1_2ono7")

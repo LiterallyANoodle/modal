@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c8iipdhwctqm8"]
+
+[ext_resource type="SystemFont" uid="uid://b05hw8a4km7wx" path="res://MenuResources/VCR_OSD_Mono_Font.tres" id="1_0fh1j"]
+
+[resource]
+font = ExtResource("1_0fh1j")
+font_size = 23
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)

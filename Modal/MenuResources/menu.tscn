@@ -1,0 +1,203 @@
+[gd_scene load_steps=15 format=3 uid="uid://6rg65q4b2jag"]
+
+[ext_resource type="Script" path="res://MenuResources/menu.gd" id="1_75nyq"]
+[ext_resource type="LabelSettings" uid="uid://c8iipdhwctqm8" path="res://MenuResources/LabelSettings.tres" id="1_dx473"]
+[ext_resource type="PackedScene" uid="uid://dedalbl4dukii" path="res://MenuResources/OKLAB.tscn" id="4_hl3es"]
+
+[sub_resource type="Theme" id="Theme_u1q62"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgn1g"]
+bg_color = Color(0.870588, 0.0784314, 0.231373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrn65"]
+bg_color = Color(0.682353, 0.615686, 0.964706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_b6lwr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mwc8"]
+bg_color = Color(1, 0.494118, 0.721569, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icw6r"]
+bg_color = Color(1, 0.564706, 0.12549, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1k1a"]
+bg_color = Color(0.85098, 0.752941, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggx7c"]
+bg_color = Color(0.121569, 0.882353, 0.486275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vsjl"]
+bg_color = Color(0, 0.87451, 0.972549, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5gh5"]
+bg_color = Color(0.345098, 0.74902, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ded28"]
+bg_color = Color(0.870588, 0.592157, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_u1q62")
+script = ExtResource("1_75nyq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0941176, 0.105882, 0.305882, 1)
+
+[node name="Header" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.023
+anchor_right = 1.0
+anchor_bottom = 0.116
+offset_top = 0.0959988
+offset_bottom = -0.167999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header"]
+layout_mode = 2
+
+[node name="Tonic" type="PanelContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wgn1g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header/HBoxContainer/Tonic"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Header/HBoxContainer/Tonic/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Tonic: "
+label_settings = ExtResource("1_dx473")
+
+[node name="Label2" type="Label" parent="Header/HBoxContainer/Tonic/HBoxContainer"]
+layout_mode = 2
+
+[node name="Mode" type="PanelContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrn65")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header/HBoxContainer/Mode"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header/HBoxContainer/Mode/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Mode: "
+label_settings = ExtResource("1_dx473")
+
+[node name="Body" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -224.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Body"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1mwc8")
+
+[node name="PanelContainer2" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_icw6r")
+
+[node name="PanelContainer3" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_g1k1a")
+
+[node name="PanelContainer4" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ggx7c")
+
+[node name="PanelContainer5" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vsjl")
+
+[node name="PanelContainer6" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_m5gh5")
+
+[node name="PanelContainer7" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ded28")
+
+[node name="OKLAB" parent="Body/VBoxContainer" instance=ExtResource("4_hl3es")]
