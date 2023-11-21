@@ -1,8 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://6rg65q4b2jag"]
+[gd_scene load_steps=20 format=3 uid="uid://6rg65q4b2jag"]
 
 [ext_resource type="Script" path="res://MenuResources/menu.gd" id="1_75nyq"]
 [ext_resource type="LabelSettings" uid="uid://c8iipdhwctqm8" path="res://MenuResources/LabelSettings.tres" id="1_dx473"]
+[ext_resource type="StyleBox" uid="uid://bjvt4jbssdevd" path="res://MenuResources/NoteColors/color1.tres" id="3_phwju"]
+[ext_resource type="StyleBox" uid="uid://cfgk04002vmx7" path="res://MenuResources/NoteColors/color2.tres" id="4_11h3k"]
 [ext_resource type="PackedScene" uid="uid://dedalbl4dukii" path="res://MenuResources/OKLAB.tscn" id="4_hl3es"]
+[ext_resource type="StyleBox" uid="uid://cfd40o2lmd2cu" path="res://MenuResources/NoteColors/color3.tres" id="5_xxowh"]
+[ext_resource type="StyleBox" uid="uid://dxncro888b0f5" path="res://MenuResources/NoteColors/color4.tres" id="6_rd3at"]
+[ext_resource type="StyleBox" uid="uid://o1eqkjv4b7wb" path="res://MenuResources/NoteColors/color5.tres" id="7_ekpns"]
+[ext_resource type="StyleBox" uid="uid://dx8rdj77syjwr" path="res://MenuResources/NoteColors/color6.tres" id="8_ojibj"]
+[ext_resource type="StyleBox" uid="uid://bgr5lxggwxm4a" path="res://MenuResources/NoteColors/color7.tres" id="9_dfbgk"]
+[ext_resource type="StyleBox" uid="uid://cihm6av6c0yu0" path="res://MenuResources/NoteColors/color8.tres" id="10_7msto"]
+[ext_resource type="StyleBox" uid="uid://ci7sqfliw05vo" path="res://MenuResources/NoteColors/color9.tres" id="11_eemn0"]
+[ext_resource type="StyleBox" uid="uid://crkq856flc4fo" path="res://MenuResources/NoteColors/color10.tres" id="12_i1woy"]
+[ext_resource type="StyleBox" uid="uid://byvrn0gfo1o5j" path="res://MenuResources/NoteColors/color11.tres" id="13_kh3eb"]
+[ext_resource type="StyleBox" uid="uid://cmg8bghud4d4q" path="res://MenuResources/NoteColors/color12.tres" id="14_vi8vq"]
 
 [sub_resource type="Theme" id="Theme_u1q62"]
 
@@ -21,55 +33,6 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_b6lwr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mwc8"]
-bg_color = Color(1, 0.494118, 0.721569, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icw6r"]
-bg_color = Color(1, 0.564706, 0.12549, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1k1a"]
-bg_color = Color(0.85098, 0.752941, 0, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggx7c"]
-bg_color = Color(0.121569, 0.882353, 0.486275, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vsjl"]
-bg_color = Color(0, 0.87451, 0.972549, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5gh5"]
-bg_color = Color(0.345098, 0.74902, 1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ded28"]
-bg_color = Color(0.870588, 0.592157, 1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -140,14 +103,116 @@ size_flags_horizontal = 6
 text = "Mode: "
 label_settings = ExtResource("1_dx473")
 
+[node name="Scale" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.157
+anchor_right = 1.0
+anchor_bottom = 0.173
+offset_top = 0.264
+offset_bottom = -0.104004
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Scale"]
+layout_mode = 2
+
+[node name="first" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_phwju")
+
+[node name="C" type="Label" parent="Scale/HBoxContainer/first"]
+layout_mode = 2
+text = "C"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="second" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("5_xxowh")
+
+[node name="D" type="Label" parent="Scale/HBoxContainer/second"]
+layout_mode = 2
+text = "D"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="third" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("7_ekpns")
+
+[node name="E" type="Label" parent="Scale/HBoxContainer/third"]
+layout_mode = 2
+text = "E"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fourth" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("8_ojibj")
+
+[node name="F" type="Label" parent="Scale/HBoxContainer/fourth"]
+layout_mode = 2
+text = "F"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fifth" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("10_7msto")
+
+[node name="G" type="Label" parent="Scale/HBoxContainer/fifth"]
+layout_mode = 2
+text = "G"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sixth" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("12_i1woy")
+
+[node name="A" type="Label" parent="Scale/HBoxContainer/sixth"]
+layout_mode = 2
+text = "A"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="seventh" type="PanelContainer" parent="Scale/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("14_vi8vq")
+
+[node name="B" type="Label" parent="Scale/HBoxContainer/seventh"]
+layout_mode = 2
+text = "B"
+label_settings = ExtResource("1_dx473")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Body" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -224.0
-offset_bottom = 176.0
+offset_top = -139.0
+offset_bottom = 261.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 25
@@ -162,42 +227,72 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_1mwc8")
+theme_override_styles/panel = ExtResource("3_phwju")
 
 [node name="PanelContainer2" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_icw6r")
+theme_override_styles/panel = ExtResource("4_11h3k")
 
 [node name="PanelContainer3" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_g1k1a")
+theme_override_styles/panel = ExtResource("5_xxowh")
 
 [node name="PanelContainer4" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_ggx7c")
+theme_override_styles/panel = ExtResource("6_rd3at")
 
 [node name="PanelContainer5" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_8vsjl")
+theme_override_styles/panel = ExtResource("7_ekpns")
 
 [node name="PanelContainer6" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_m5gh5")
+theme_override_styles/panel = ExtResource("8_ojibj")
 
 [node name="PanelContainer7" type="PanelContainer" parent="Body/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_b6lwr")
-theme_override_styles/panel = SubResource("StyleBoxFlat_ded28")
+theme_override_styles/panel = ExtResource("9_dfbgk")
+
+[node name="PanelContainer8" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = ExtResource("10_7msto")
+
+[node name="PanelContainer9" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = ExtResource("11_eemn0")
+
+[node name="PanelContainer10" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = ExtResource("12_i1woy")
+
+[node name="PanelContainer11" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = ExtResource("13_kh3eb")
+
+[node name="PanelContainer12" type="PanelContainer" parent="Body/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_b6lwr")
+theme_override_styles/panel = ExtResource("14_vi8vq")
 
 [node name="OKLAB" parent="Body/VBoxContainer" instance=ExtResource("4_hl3es")]
